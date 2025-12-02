@@ -1,19 +1,15 @@
 def print_pascal(rows):
-    previous_row = [1]
-
     for i in range(rows):
-        print(previous_row)
         
-        new_row = []
-        new_row.append(1)
+        val = 1
         
-        for j in range(len(previous_row) - 1):
-            sum_val = previous_row[j] + previous_row[j+1]
-            new_row.append(sum_val)
+        for j in range(i + 1):
+            print(val, end=" ")
             
-        new_row.append(1)
-        
-        previous_row = new_row
+            val = val * (i - j) // (j + 1)
+            
+        print()
 
-num_rows = int(input("Enter how many rows: "))
-print_pascal(num_rows)
+r = int(input("Enter how many rows: "))
+
+print_pascal(r)
