@@ -8,12 +8,11 @@ def calculator(n1, n2, op):
     elif op == "/":
         return n1 / n2
     else:
-        return "Wrong operator"
+        return "Invalid"
 
-# Get simple input
 num1 = float(input("Enter first number: "))
 num2 = float(input("Enter second number: "))
-symbol = input("Enter operation (+, -, *, /): ")
+sign = input("Enter operation (+, -, *, /): ")
 
-# Call function
-print("The result is:", calculator(num1, num2, symbol))
+result = calculator(num1, num2, sign)
+print("Result:", result)
